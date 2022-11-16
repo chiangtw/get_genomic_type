@@ -1,0 +1,10 @@
+INFO:root:Checking the site: (1, 633567, -)
+INFO:root:The site is not an annotated splicing site!
+INFO:root:Checking the site: (1, 634095, -)
+INFO:root:The site is not an annotated splicing site!
+INFO:root:Checking the site: (1, 732017, -)
+INFO:root:Case 1!
+INFO:root:Checking the site: (1, 733251, +)
+INFO:root:The site is not an annotated splicing site!
+INFO:root:Checking the site: (1, 746695, -)
+INFO:root:There are no AS events on this site!

@@ -1,0 +1,6 @@
+chr	pos	strand	is_annotated_splicing_site	has_AS_event
+1	633567	-	0	0
+1	634095	-	0	0
+1	732017	-	1	1
+1	733251	+	0	0
+1	746695	-	1	0

@@ -1,0 +1,6 @@
+chr	pos	strand	genomic_types
+1	633567	-	intron
+1	634095	-	intron
+1	732017	-	intron|noncoding
+1	733251	+	intergenic
+1	746695	-	intron|noncoding

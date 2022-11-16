@@ -1,0 +1,6 @@
+chr	pos	strand	CDS	intron	5p_UTR	3p_UTR	start_codon	stop_codon	noncoding	intergenic
+1	633567	-	0	1	0	0	0	0	0	0
+1	634095	-	0	1	0	0	0	0	0	0
+1	732017	-	0	1	0	0	0	0	1	0
+1	733251	+	0	0	0	0	0	0	0	1
+1	746695	-	0	1	0	0	0	0	1	0
