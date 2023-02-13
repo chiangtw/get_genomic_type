@@ -13,7 +13,10 @@ class AnnotationDB:
         'AnnoData',
         (
             'gene_id',
+            'gene_type',
+            'gene_name',
             'transcript_id',
+            'transcript_type',
             'exon_number',
             'num_of_exons',
             'len_of_transcript',
@@ -98,7 +101,7 @@ class AnnotationDB:
 
         if not sites_data:
             # intergenic case
-            all_anno_data.append(self._anno_data('', '', '', '', '', 0))
+            all_anno_data.append(self._anno_data('', '', '', '', '', '','', '', 0))
         else:
             for tid, gp in self._get_transcript_groups(sites_data):
                 exon = self._get_feature_data('exon', gp)
@@ -109,6 +112,16 @@ class AnnotationDB:
                 num_of_exons = len(transcript_exons)
                 len_of_transcript = self._sum_of_exons(transcript_exons)
                 on_exon_boundary = 0
+
+                gene_type = self._get_attribute(transcript, 'gene_type')
+                if not gene_type:
+                    gene_type = self._get_attribute(transcript, 'gene_biotype')
+
+                gene_name = self._get_attribute(transcript, 'gene_name')
+
+                transcript_type = self._get_attribute(transcript, 'transcript_type')
+                if not transcript_type:
+                    transcript_type = self._get_attribute(transcript, 'transcript_biotype')
 
                 if exon:
                     exon_number = self._get_attribute(exon, 'exon_number')
@@ -124,7 +137,10 @@ class AnnotationDB:
                 all_anno_data.append(
                     self._anno_data(
                         gid,
+                        gene_type,
+                        gene_name,
                         tid,
+                        transcript_type,
                         exon_number,
                         num_of_exons,
                         len_of_transcript,
